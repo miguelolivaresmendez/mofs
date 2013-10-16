@@ -1,0 +1,6 @@
+<launch>
+  <node name="flcYaw" pkg="mofs" type="mofs" args="PIDyawEPFL.txt 125rulesEPFL.txt flcYaw">
+  </node> 
+    <node name="flcRoll" pkg="mofs" type="mofs" args="CEroll.txt rulesCERoll.txt flcRoll">
+  </node> 
+</launch>

@@ -1,0 +1,729 @@
+\section{M\-O\-F\-S\-Var Class Reference}
+\label{classMOFSVar}\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}}
+
+
+{\ttfamily \#include $<$M\-O\-F\-S\-Var.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Var\-Values}
+\item 
+struct {\bf X\-Array}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf begin\-\_\-interval} (char set)
+\item 
+void {\bf calc} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: calc \end{DoxyCompactList}\item 
+int {\bf calc\-\_\-values} (float x)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: calc\-\_\-value \end{DoxyCompactList}\item 
+float {\bf center} (char set)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: center \end{DoxyCompactList}\item 
+char {\bf center\-Set} ()
+\item 
+int {\bf correct\-Value} (char set)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: correct\-Value \end{DoxyCompactList}\item 
+float {\bf crisp\-Central} ()
+\item 
+float {\bf crisp\-Index} ()
+\item 
+float {\bf end\-\_\-interval} (char set)
+\item 
+float {\bf max\-Central} ()
+\item 
+float {\bf max\-X} ()
+\item 
+float {\bf min\-Central} ()
+\item 
+float {\bf min\-X} ()
+\item 
+{\bf M\-O\-F\-S\-Var} (char $\ast${\bf \-\_\-name}, float \-\_\-max\-\_\-x, float \-\_\-min\-\_\-x, int crisp)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: \doxyref{M\-O\-F\-S\-Var}{p.}{classMOFSVar} \end{DoxyCompactList}\item 
+{\bf M\-O\-F\-S\-Var} (char $\ast${\bf \-\_\-name}, float \-\_\-max\-\_\-x, float \-\_\-min\-\_\-x, int crisp, float \-\_\-max\-\_\-central, float \-\_\-min\-\_\-central, int \-\_\-crisp\-\_\-central)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: \doxyref{M\-O\-F\-S\-Var}{p.}{classMOFSVar} \end{DoxyCompactList}\item 
+{\bf M\-O\-F\-S\-Var} (F\-I\-L\-E $\ast$file\-\_\-in, int option)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: \doxyref{M\-O\-F\-S\-Var}{p.}{classMOFSVar} \end{DoxyCompactList}\item 
+void {\bf Outputs} (float y\-\_\-array[$\,$])
+\item 
+void {\bf Salvar\-Incidencia} (F\-I\-L\-E $\ast$file\-\_\-out)
+\item 
+char {\bf set\-Index} ()
+\item 
+void {\bf Sets\-Array} (char sets\-\_\-array[$\,$])
+\item 
+int {\bf values\-\_\-lenght} ()
+\item 
+void {\bf var\-Name} (char n[$\,$])
+\item 
+void {\bf V\-Name} (char name\-\_\-[$\,$])
+\item 
+float {\bf x\-Value} ()
+\item 
+float {\bf y\-Value} (char set)
+\item 
+{\bf $\sim$\-M\-O\-F\-S\-Var} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: $\sim$\-M\-O\-F\-S\-Var \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char {\bf \-\_\-name} [30]
+\item 
+int {\bf array\-\_\-size}
+\item 
+float {\bf crisp\-\_\-central}
+\item 
+int {\bf crisp\-\_\-central\-\_\-value}
+\item 
+float {\bf crisp\-\_\-index}
+\item 
+int {\bf crisp\-\_\-value}
+\item 
+{\bf M\-O\-F\-S\-Func\-Tri} $\ast$ {\bf function\-\_\-type}
+\item 
+float {\bf input}
+\item 
+float {\bf max\-\_\-central}
+\item 
+int {\bf max\-\_\-str}
+\item 
+float {\bf max\-\_\-x}
+\item 
+float {\bf max\-\_\-y}
+\item 
+float {\bf min\-\_\-central}
+\item 
+float {\bf min\-\_\-x}
+\item 
+float {\bf min\-\_\-y}
+\item 
+char {\bf name} [30]
+\item 
+int {\bf overlap\-\_\-index}
+\item 
+char {\bf set\-\_\-index}
+\item 
+float {\bf set\-\_\-lenght}
+\item 
+{\bf Var\-Values} $\ast$ {\bf values}
+\item 
+{\bf X\-Array} $\ast$ {\bf x\-\_\-values\-\_\-array}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 33 of file M\-O\-F\-S\-Var.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}}
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{M\-O\-F\-S\-Var}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Var\-::\-M\-O\-F\-S\-Var (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{\-\_\-name, }
+\item[{float}]{\-\_\-max\-\_\-x, }
+\item[{float}]{\-\_\-min\-\_\-x, }
+\item[{int}]{crisp}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a2034a4a800a68cd19c56662363f429f7}
+
+
+
+
+ Function\-: \doxyref{M\-O\-F\-S\-Var}{p.}{classMOFSVar} 
+
+\begin{DoxyVerb}    Purpose:        1st constructor.
+
+    Arguments:      _name   -->     the name of the var
+                    _max_x  -->     the maximum value for sets in the x axis
+                    _min    -->     the minimum value for sets in the x axis
+                    crisp   -->     number of sets
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}}
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{M\-O\-F\-S\-Var}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Var\-::\-M\-O\-F\-S\-Var (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{\-\_\-name, }
+\item[{float}]{\-\_\-max\-\_\-x, }
+\item[{float}]{\-\_\-min\-\_\-x, }
+\item[{int}]{crisp, }
+\item[{float}]{\-\_\-max\-\_\-central, }
+\item[{float}]{\-\_\-min\-\_\-central, }
+\item[{int}]{\-\_\-crisp\-\_\-central}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a5fd7cb62bbcb7ed9ae03a76078b95b8e}
+
+
+
+
+ Function\-: \doxyref{M\-O\-F\-S\-Var}{p.}{classMOFSVar} 
+
+\begin{DoxyVerb}    Purpose:        2nd constructor.
+
+    Arguments:      _name                   -->     the name of the var
+                            _max_x                  -->     the maximum value for sets in the x axis
+                            _min                    -->     the minimum value for sets in the x axis
+                            crisp                   -->     number of sets
+                            _max_central    --> the maximum value for sets of central zone with a different number of sets
+                            _min_central    --> the minimum value for sets of central zone with a different number of sets
+                            _crisp_central  --> number of sets of the central zone
+
+    Returns:        nothing
+
+    Comments:       In this constructor is possible to define a zone with specific number of sets
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 115 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}}
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{M\-O\-F\-S\-Var}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Var\-::\-M\-O\-F\-S\-Var (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in, }
+\item[{int}]{option}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a67931caa73b4851fabee78776b4a3731}
+
+
+
+
+ Function\-: \doxyref{M\-O\-F\-S\-Var}{p.}{classMOFSVar} 
+
+\begin{DoxyVerb}    Purpose:        3nd constructor.
+
+    Arguments:      file_in --> The file with the information stored
+                            option  --> 0: The sets are generated autonomously using the information stored (equal to the 2nd constructor arguments)
+                                                    1: The sets are read from the file, so you can specify the exactly position and size of each set
+
+    Returns:        nothing
+
+    Comments:       In this constructor is possible read all the information from a file (recommended option)
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 160 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!$\sim$\-M\-O\-F\-S\-Var@{$\sim$\-M\-O\-F\-S\-Var}}
+\index{$\sim$\-M\-O\-F\-S\-Var@{$\sim$\-M\-O\-F\-S\-Var}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{$\sim$\-M\-O\-F\-S\-Var}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Var\-::$\sim$\-M\-O\-F\-S\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_ae545b99bdfef5533fc5e293a927660dd}
+
+
+
+
+ Function\-: $\sim$\-M\-O\-F\-S\-Var 
+
+\begin{DoxyVerb}    Purpose:        desconstructor.
+
+    Arguments:      none
+
+    Returns:        nothing
+
+    Comments:       nothing to do right now
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 228 of file M\-O\-F\-S\-Var.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!begin\-\_\-interval@{begin\-\_\-interval}}
+\index{begin\-\_\-interval@{begin\-\_\-interval}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{begin\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::begin\-\_\-interval (
+\begin{DoxyParamCaption}
+\item[{char}]{set}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a0405137f03966974d1cd3b17188100ef}
+
+
+Definition at line 337 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!calc@{calc}}
+\index{calc@{calc}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{calc}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Var\-::calc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a8a6959377a7b867d626b0084c3c28985}
+
+
+
+
+ Function\-: calc 
+
+\begin{DoxyVerb}    Purpose:        Calc all the values of the x_values_array
+
+    Arguments:      none
+
+    Returns:        nothing
+
+    Comments:       Calc all the x's values and the set values
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 248 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!calc\-\_\-values@{calc\-\_\-values}}
+\index{calc\-\_\-values@{calc\-\_\-values}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{calc\-\_\-values}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::calc\-\_\-values (
+\begin{DoxyParamCaption}
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_ad665d5d1786c1debe0f20717d1b8631f}
+
+
+
+
+ Function\-: calc\-\_\-value 
+
+\begin{DoxyVerb}    Purpose:        Calc the sets and y values for the input x
+
+    Arguments:      none
+
+    Returns:        nothing
+
+    Comments:       Calc all the x's values and the set values
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 360 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!center@{center}}
+\index{center@{center}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{center}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::center (
+\begin{DoxyParamCaption}
+\item[{char}]{set}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a7a4e701d0c666bfb09831d7f13551819}
+
+
+
+
+ Function\-: center 
+
+\begin{DoxyVerb}    Purpose:        Return the center value of the set
+
+    Arguments:      char set        -->     the set which center is wanted to konw
+
+    Returns:        the center of the set
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 318 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!center\-Set@{center\-Set}}
+\index{center\-Set@{center\-Set}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{center\-Set}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Var\-::center\-Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_ac4ee40300142f2de17f7a5768eeb91cf}
+
+
+Definition at line 497 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!correct\-Value@{correct\-Value}}
+\index{correct\-Value@{correct\-Value}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{correct\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::correct\-Value (
+\begin{DoxyParamCaption}
+\item[{char}]{set}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_ab5cfcd921ef13fe24235bcd5f1904f7f}
+
+
+
+
+ Function\-: correct\-Value 
+
+\begin{DoxyVerb}    Purpose:        check if a set is set value is valid for the last entry
+
+    Arguments:      set     -->     The set we want to know
+
+    Returns:        -1      -->     If there is no entry
+                             0      -->     If the set is not valid
+                             1      -->     valid set
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 448 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!crisp\-Central@{crisp\-Central}}
+\index{crisp\-Central@{crisp\-Central}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{crisp\-Central}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::crisp\-Central (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a39057c75b7a24489606b8f0702308053}
+
+
+Definition at line 593 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!crisp\-Index@{crisp\-Index}}
+\index{crisp\-Index@{crisp\-Index}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{crisp\-Index}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::crisp\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a989c45b4550f4c5875844d6a2b10725f}
+
+
+Definition at line 580 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!end\-\_\-interval@{end\-\_\-interval}}
+\index{end\-\_\-interval@{end\-\_\-interval}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{end\-\_\-interval}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::end\-\_\-interval (
+\begin{DoxyParamCaption}
+\item[{char}]{set}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_aa7ba78ad79bf140a42c367ef05be648f}
+
+
+Definition at line 328 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!max\-Central@{max\-Central}}
+\index{max\-Central@{max\-Central}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{max\-Central}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::max\-Central (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a205d8fff6a84dd1d0179bd5009015da4}
+
+
+Definition at line 585 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!max\-X@{max\-X}}
+\index{max\-X@{max\-X}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{max\-X}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::max\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_ae319b92509497de3c107fe1e08a66aa4}
+
+
+Definition at line 572 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!min\-Central@{min\-Central}}
+\index{min\-Central@{min\-Central}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{min\-Central}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::min\-Central (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_aadeab56000d1f8b793b8069f6d2346d1}
+
+
+Definition at line 589 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!min\-X@{min\-X}}
+\index{min\-X@{min\-X}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{min\-X}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::min\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a009bde4800d2a429fd9ab29f5eab871a}
+
+
+Definition at line 576 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!Outputs@{Outputs}}
+\index{Outputs@{Outputs}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{Outputs}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Var\-::\-Outputs (
+\begin{DoxyParamCaption}
+\item[{float}]{y\-\_\-array[$\,$]}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a98639a044102a40c1987d6bc210af810}
+
+
+Definition at line 528 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!Salvar\-Incidencia@{Salvar\-Incidencia}}
+\index{Salvar\-Incidencia@{Salvar\-Incidencia}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{Salvar\-Incidencia}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Var\-::\-Salvar\-Incidencia (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-out}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_adca91ca005e24ab1a4a567825900fe77}
+
+
+Definition at line 540 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!set\-Index@{set\-Index}}
+\index{set\-Index@{set\-Index}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{set\-Index}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Var\-::set\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a9fe171574d43bf5c18cab9020e595821}
+
+
+Definition at line 553 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!Sets\-Array@{Sets\-Array}}
+\index{Sets\-Array@{Sets\-Array}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{Sets\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Var\-::\-Sets\-Array (
+\begin{DoxyParamCaption}
+\item[{char}]{sets\-\_\-array[$\,$]}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a0954088bf76d28616ac58ef9499c4b8c}
+
+
+Definition at line 513 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!values\-\_\-lenght@{values\-\_\-lenght}}
+\index{values\-\_\-lenght@{values\-\_\-lenght}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{values\-\_\-lenght}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::values\-\_\-lenght (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_ae764a9e694df6c3fe4c14dfb42dac33c}
+
+
+Definition at line 487 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!var\-Name@{var\-Name}}
+\index{var\-Name@{var\-Name}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{var\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Var\-::var\-Name (
+\begin{DoxyParamCaption}
+\item[{char}]{n[$\,$]}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a01c78618b9ea839126f6f43e13fe14ad}
+
+
+Definition at line 560 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!V\-Name@{V\-Name}}
+\index{V\-Name@{V\-Name}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{V\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Var\-::\-V\-Name (
+\begin{DoxyParamCaption}
+\item[{char}]{name\-\_\-[$\,$]}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_affaa2187bfe2c3cc050ebc98f4a37fa5}
+
+
+Definition at line 569 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!x\-Value@{x\-Value}}
+\index{x\-Value@{x\-Value}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{x\-Value}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::x\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_adb1180ae8b4859a13b7c08e0dc6cd534}
+
+
+Definition at line 548 of file M\-O\-F\-S\-Var.\-cpp.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!y\-Value@{y\-Value}}
+\index{y\-Value@{y\-Value}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{y\-Value}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::y\-Value (
+\begin{DoxyParamCaption}
+\item[{char}]{set}
+\end{DoxyParamCaption}
+)}\label{classMOFSVar_a7f5697cd6cbd7775f96b2d2d57fc349b}
+
+
+Definition at line 464 of file M\-O\-F\-S\-Var.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!\-\_\-name@{\-\_\-name}}
+\index{\-\_\-name@{\-\_\-name}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Var\-::\-\_\-name[30]\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_afb09cc06a1a82848cd4b2d3a6afb09c2}
+
+
+Definition at line 57 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!array\-\_\-size@{array\-\_\-size}}
+\index{array\-\_\-size@{array\-\_\-size}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{array\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::array\-\_\-size\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a0cd84a24f6368f07243c9c431ed0c6fb}
+
+
+Definition at line 41 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!crisp\-\_\-central@{crisp\-\_\-central}}
+\index{crisp\-\_\-central@{crisp\-\_\-central}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{crisp\-\_\-central}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::crisp\-\_\-central\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a65ffc920dced180cabf280c81ee38329}
+
+
+Definition at line 68 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!crisp\-\_\-central\-\_\-value@{crisp\-\_\-central\-\_\-value}}
+\index{crisp\-\_\-central\-\_\-value@{crisp\-\_\-central\-\_\-value}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{crisp\-\_\-central\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::crisp\-\_\-central\-\_\-value\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_afbee71785fbc73873105c6774f1351f3}
+
+
+Definition at line 67 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!crisp\-\_\-index@{crisp\-\_\-index}}
+\index{crisp\-\_\-index@{crisp\-\_\-index}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{crisp\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::crisp\-\_\-index\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_aa6935043c90f2f3e66fae25a3dddc593}
+
+
+Definition at line 65 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!crisp\-\_\-value@{crisp\-\_\-value}}
+\index{crisp\-\_\-value@{crisp\-\_\-value}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{crisp\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::crisp\-\_\-value\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_aaa47a83c575cfdb1fa913712994c8dad}
+
+
+Definition at line 63 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!function\-\_\-type@{function\-\_\-type}}
+\index{function\-\_\-type@{function\-\_\-type}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{function\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-O\-F\-S\-Func\-Tri}$\ast$ M\-O\-F\-S\-Var\-::function\-\_\-type\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_ae2c9741d4bc96748bfa757c7c158c310}
+
+
+Definition at line 58 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!input@{input}}
+\index{input@{input}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{input}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::input\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_ae940c33fff6f190b404f3430798a9125}
+
+
+Definition at line 71 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!max\-\_\-central@{max\-\_\-central}}
+\index{max\-\_\-central@{max\-\_\-central}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{max\-\_\-central}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::max\-\_\-central\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_ab89fd2f92917e591b1e7fac4bd6c3153}
+
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!max\-\_\-str@{max\-\_\-str}}
+\index{max\-\_\-str@{max\-\_\-str}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{max\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::max\-\_\-str\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_ab4fac279760fbb910e7259c02d0c17e1}
+
+
+Definition at line 54 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!max\-\_\-x@{max\-\_\-x}}
+\index{max\-\_\-x@{max\-\_\-x}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{max\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::max\-\_\-x\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a4f5eed5a0822ce76e63cb394286d3550}
+
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!max\-\_\-y@{max\-\_\-y}}
+\index{max\-\_\-y@{max\-\_\-y}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{max\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::max\-\_\-y\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_aeacbcaab9c70f0a8817ccb17f3485ee6}
+
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!min\-\_\-central@{min\-\_\-central}}
+\index{min\-\_\-central@{min\-\_\-central}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{min\-\_\-central}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::min\-\_\-central\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_ad499e7b635746fb475b33059c571faf6}
+
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!min\-\_\-x@{min\-\_\-x}}
+\index{min\-\_\-x@{min\-\_\-x}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{min\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::min\-\_\-x\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_abbba11712bb27d22022d45592e739870}
+
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!min\-\_\-y@{min\-\_\-y}}
+\index{min\-\_\-y@{min\-\_\-y}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{min\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::min\-\_\-y\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a85d19e8e02eee3b57ee54864343decc2}
+
+
+Definition at line 60 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!name@{name}}
+\index{name@{name}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Var\-::name[30]\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_afc1b855c0fc150a49c5c7a3c62851d08}
+
+
+Definition at line 56 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!overlap\-\_\-index@{overlap\-\_\-index}}
+\index{overlap\-\_\-index@{overlap\-\_\-index}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{overlap\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Var\-::overlap\-\_\-index\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a5e780b801f9d96c24cc5866bdccb2972}
+
+
+Definition at line 62 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!set\-\_\-index@{set\-\_\-index}}
+\index{set\-\_\-index@{set\-\_\-index}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{set\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Var\-::set\-\_\-index\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a4f0c7d1d077c858cd1ec7db1653d8f28}
+
+
+Definition at line 69 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!set\-\_\-lenght@{set\-\_\-lenght}}
+\index{set\-\_\-lenght@{set\-\_\-lenght}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{set\-\_\-lenght}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Var\-::set\-\_\-lenght\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_aae4da70514027796fad1836dfe574739}
+
+
+Definition at line 66 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!values@{values}}
+\index{values@{values}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Var\-Values}$\ast$ M\-O\-F\-S\-Var\-::values\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a33671ae060b92d5377184996893a411e}
+
+
+Definition at line 70 of file M\-O\-F\-S\-Var.\-h.
+
+\index{M\-O\-F\-S\-Var@{M\-O\-F\-S\-Var}!x\-\_\-values\-\_\-array@{x\-\_\-values\-\_\-array}}
+\index{x\-\_\-values\-\_\-array@{x\-\_\-values\-\_\-array}!MOFSVar@{M\-O\-F\-S\-Var}}
+\subsubsection[{x\-\_\-values\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\-Array}$\ast$ M\-O\-F\-S\-Var\-::x\-\_\-values\-\_\-array\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSVar_a4715d7c3f44be0fe9ae8e3918b771b39}
+
+
+Definition at line 61 of file M\-O\-F\-S\-Var.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf M\-O\-F\-S\-Var.\-h}\item 
+{\bf M\-O\-F\-S\-Var.\-cpp}\end{DoxyCompactItemize}

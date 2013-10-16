@@ -1,0 +1,5 @@
+<launch>
+  <node name="flcYaw" pkg="mofs" type="mofs" args="PIDyaw.txt PIDyaw125rules.txt flcYaw">
+  </node> 
+ 
+</launch>
