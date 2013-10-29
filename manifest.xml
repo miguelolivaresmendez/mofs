@@ -8,7 +8,7 @@
   <email>miguel.olivaresmendez@uni.lu</email>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/mofs</url>
+  <url>http://ros.org/wiki/MOFS_Fuzzy_Control</url>
     <export>
   <rosdoc config="rosdoc.yaml" />
   </export>
