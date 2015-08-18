@@ -1,0 +1,38 @@
+4		//Number of variables (inputs + outputs)
+
+I		//Type of variable (I = input; O = output)
+error_roll	//name
+5		//number of set of the membership functions
+-30.0		//1st intersection with X axis
+-2.3154		//2nd intersection with X axis
+0		//3rd intersection with X axis
+2.3154		//4th intersection with X axis
+30		//5th intersection with X axis
+I		//...equal
+dot_roll
+5
+-10
+-5.9612
+0
+5.9612
+10
+I
+int_roll
+5
+-10
+-7.63
+0
+7.63
+10
+O
+output_roll
+9
+-0.9
+-0.8995
+-0.8936
+-0.7314
+0
+0.7314
+0.8936
+0.8995
+0.9

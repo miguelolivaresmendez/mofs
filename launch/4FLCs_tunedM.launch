@@ -1,0 +1,15 @@
+<launch>
+  <!--node name="flcYaw" pkg="mofs" type="mofs" args="PID.txt 125Rules.txt flcYaw"-->
+  <node name="flcYaw" pkg="mofs" type="mofs" args="PID_Roll.txt basic45rules_7.txt flcYaw" output="screen">
+  	<param name="flc_conf_dir" value="$(find mofs)/include/FLC/" type="str"/>
+  </node> 
+    <node name="flcRoll" pkg="mofs" type="mofs" args="PID_Pitch_Height.txt basic45rules_7.txt flcRoll" output="screen">
+    <param name="flc_conf_dir" value="$(find mofs)/include/FLC/" type="str"/>
+  </node> 
+	<node name="flcPitch" pkg="mofs" type="mofs" args="PID_Pitch_Height.txt basic45rules_7.txt flcPitch" output="screen">
+	<param name="flc_conf_dir" value="$(find mofs)/include/FLC/" type="str"/>
+  </node> 
+  	<node name="flcHeight" pkg="mofs" type="mofs" args="PID_Pitch_Height.txt basic45rules_7.txt flcHeight" output="screen">
+  	<param name="flc_conf_dir" value="$(find mofs)/include/FLC/" type="str"/>
+  </node> 
+</launch>

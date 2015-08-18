@@ -1,0 +1,4 @@
+#float[number_of_inputs] inputs --> modify it depends of your fuzzy controller definition
+float32[4] inputs
+---
+float32 output

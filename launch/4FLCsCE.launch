@@ -1,0 +1,10 @@
+<launch>
+  <node name="flcYaw" pkg="mofs" type="mofs" args="CEyaw.txt rulesCEYaw.txt flcYaw">
+  </node> 
+    <node name="flcRoll" pkg="mofs" type="mofs" args="CEroll2_meters.txt rulesCERoll.txt flcRoll">
+  </node> 
+	<node name="flcPitch" pkg="mofs" type="mofs" args="CEroll2_meters.txt rulesCERoll.txt flcPitch">
+  </node> 
+  	<node name="flcHeight" pkg="mofs" type="mofs" args="CEpitch2.txt rulesCEPitch.txt flcHeight">
+  </node> 
+</launch>

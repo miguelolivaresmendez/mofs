@@ -1,0 +1,6 @@
+<launch>
+   <node name="flcRoll" pkg="mofs" type="mofs4" args="PID_basic45rules_speed.txt basic45rules_speed.txt flcRoll">
+  </node> 
+  	<node name="flcHeight" pkg="mofs" type="mofs4" args="PID_basic45rules_speed.txt basic45rules_speed.txt flcHeight">
+  </node> 
+</launch>

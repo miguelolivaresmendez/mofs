@@ -1,0 +1,564 @@
+\section{Drone\-Controller Class Reference}
+\label{classDroneController}\index{Drone\-Controller@{Drone\-Controller}}
+
+
+{\ttfamily \#include $<$Drone\-Controller.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf clear\-Target} ()
+\item 
+{\bf Drone\-Controller} (void)
+\item 
+{\bf Drone\-Position} {\bf get\-Current\-Target} ()
+\item 
+{\bf Control\-Command} {\bf get\-Last\-Control} ()
+\item 
+Too\-N\-::\-Vector$<$ 4 $>$ {\bf get\-Last\-Err} ()
+\item 
+void {\bf set\-Target} ({\bf Drone\-Position} new\-Target)
+\item 
+{\bf Control\-Command} {\bf update} (tum\-\_\-ardrone\-::filter\-\_\-state\-Const\-Ptr)
+\item 
+{\bf $\sim$\-Drone\-Controller} (void)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf agressiveness}
+\item 
+float {\bf input\-Yaw} [3]
+\item 
+double {\bf Kd\-\_\-gaz}
+\item 
+double {\bf Kd\-\_\-rp}
+\item 
+double {\bf Kd\-\_\-yaw}
+\item 
+double {\bf Ki\-\_\-gaz}
+\item 
+double {\bf Ki\-\_\-rp}
+\item 
+double {\bf Ki\-\_\-yaw}
+\item 
+double {\bf Kp\-\_\-gaz}
+\item 
+double {\bf Kp\-\_\-rp}
+\item 
+double {\bf Kp\-\_\-yaw}
+\item 
+F\-I\-L\-E $\ast$ {\bf logdata}
+\item 
+Too\-N\-::\-Vector$<$ 28 $>$ {\bf log\-Info}
+\item 
+char {\bf log\-Label} [100]
+\item 
+double {\bf max\-\_\-gaz\-\_\-drop}
+\item 
+double {\bf max\-\_\-gaz\-\_\-rise}
+\item 
+double {\bf max\-\_\-rp}
+\item 
+double {\bf max\-\_\-yaw}
+\item 
+{\bf M\-O\-F\-S\-Model\-::\-M\-O\-F\-S\-Model} $\ast$ {\bf mofs\-Yaw}
+\item 
+Control\-Node $\ast$ {\bf node}
+\item 
+float {\bf output\-Yaw}
+\item 
+double {\bf rise\-\_\-fac}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf calc\-Control} (Too\-N\-::\-Vector$<$ 4 $>$ new\-\_\-err, Too\-N\-::\-Vector$<$ 4 $>$ d\-\_\-error, double yaw)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf eighth\-Target\-Distance}
+\item 
+double {\bf fifth\-Target\-Distance}
+\item 
+double {\bf first\-Target\-Distance}
+\item 
+double {\bf fourth\-Target\-Distance}
+\item 
+{\bf Control\-Command} {\bf hover\-Command}
+\item 
+Too\-N\-::\-Vector$<$ 4 $>$ {\bf i\-\_\-term}
+\item 
+double {\bf initial\-Distance}
+\item 
+bool {\bf initial\-Flyed}
+\item 
+Too\-N\-::\-Vector$<$ 4 $>$ {\bf last\-\_\-err}
+\item 
+{\bf Control\-Command} {\bf last\-Sent\-Control}
+\item 
+double {\bf last\-Time\-Stamp}
+\item 
+double {\bf nineth\-Target\-Distance}
+\item 
+bool {\bf ptam\-Is\-Good}
+\item 
+double {\bf scale\-Accuracy}
+\item 
+double {\bf second\-Target\-Distance}
+\item 
+double {\bf seventh\-Target\-Distance}
+\item 
+double {\bf sixth\-Target\-Distance}
+\item 
+Too\-N\-::\-Vector$<$ 4 $>$ {\bf speed\-Averages}
+\item 
+{\bf Drone\-Position} {\bf target}
+\item 
+Too\-N\-::\-Vector$<$ 4 $>$ {\bf target\-New}
+\item 
+double {\bf target\-Set\-At\-Clock}
+\item 
+bool {\bf target\-Valid}
+\item 
+double {\bf third\-Target\-Distance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 55 of file Drone\-Controller.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Drone\-Controller@{Drone\-Controller}!Drone\-Controller@{Drone\-Controller}}
+\index{Drone\-Controller@{Drone\-Controller}!DroneController@{Drone\-Controller}}
+\subsubsection[{Drone\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Drone\-Controller\-::\-Drone\-Controller (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classDroneController_abb174c1eccc754aa056a83f17d6f1363}
+
+
+Definition at line 24 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!$\sim$\-Drone\-Controller@{$\sim$\-Drone\-Controller}}
+\index{$\sim$\-Drone\-Controller@{$\sim$\-Drone\-Controller}!DroneController@{Drone\-Controller}}
+\subsubsection[{$\sim$\-Drone\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Drone\-Controller\-::$\sim$\-Drone\-Controller (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classDroneController_a4949f594a625daa3d5b948d6b3da6055}
+
+
+Definition at line 57 of file Drone\-Controller.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Drone\-Controller@{Drone\-Controller}!calc\-Control@{calc\-Control}}
+\index{calc\-Control@{calc\-Control}!DroneController@{Drone\-Controller}}
+\subsubsection[{calc\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void Drone\-Controller\-::calc\-Control (
+\begin{DoxyParamCaption}
+\item[{Too\-N\-::\-Vector$<$ 4 $>$}]{new\-\_\-err, }
+\item[{Too\-N\-::\-Vector$<$ 4 $>$}]{d\-\_\-error, }
+\item[{double}]{yaw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a6a55841d2c473ba6d7ddce5c9efb0176}
+
+
+Definition at line 160 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!clear\-Target@{clear\-Target}}
+\index{clear\-Target@{clear\-Target}!DroneController@{Drone\-Controller}}
+\subsubsection[{clear\-Target}]{\setlength{\rightskip}{0pt plus 5cm}void Drone\-Controller\-::clear\-Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDroneController_af63b9cddca25ff6eb181ecf72bdd92c7}
+
+
+Definition at line 142 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!get\-Current\-Target@{get\-Current\-Target}}
+\index{get\-Current\-Target@{get\-Current\-Target}!DroneController@{Drone\-Controller}}
+\subsubsection[{get\-Current\-Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Drone\-Position} Drone\-Controller\-::get\-Current\-Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDroneController_adb8a9508d49eebb014c5489288746d55}
+
+
+Definition at line 137 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!get\-Last\-Control@{get\-Last\-Control}}
+\index{get\-Last\-Control@{get\-Last\-Control}!DroneController@{Drone\-Controller}}
+\subsubsection[{get\-Last\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\-Command} Drone\-Controller\-::get\-Last\-Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDroneController_a6fc756271c117d1c41f224772d1ef9d1}
+
+
+Definition at line 287 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!get\-Last\-Err@{get\-Last\-Err}}
+\index{get\-Last\-Err@{get\-Last\-Err}!DroneController@{Drone\-Controller}}
+\subsubsection[{get\-Last\-Err}]{\setlength{\rightskip}{0pt plus 5cm}Too\-N\-::\-Vector$<$ 4 $>$ Drone\-Controller\-::get\-Last\-Err (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classDroneController_a60334e0c1638e511bbd53fbb791b1ef4}
+
+
+Definition at line 283 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!set\-Target@{set\-Target}}
+\index{set\-Target@{set\-Target}!DroneController@{Drone\-Controller}}
+\subsubsection[{set\-Target}]{\setlength{\rightskip}{0pt plus 5cm}void Drone\-Controller\-::set\-Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Drone\-Position}}]{new\-Target}
+\end{DoxyParamCaption}
+)}\label{classDroneController_a67460b818940b91bb61569644881dbed}
+
+
+Definition at line 119 of file Drone\-Controller.\-cpp.
+
+\index{Drone\-Controller@{Drone\-Controller}!update@{update}}
+\index{update@{update}!DroneController@{Drone\-Controller}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\-Command} Drone\-Controller\-::update (
+\begin{DoxyParamCaption}
+\item[{tum\-\_\-ardrone\-::filter\-\_\-state\-Const\-Ptr}]{state}
+\end{DoxyParamCaption}
+)}\label{classDroneController_a95449df7d545010d2cda7540a20fbf08}
+
+
+Definition at line 71 of file Drone\-Controller.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{Drone\-Controller@{Drone\-Controller}!agressiveness@{agressiveness}}
+\index{agressiveness@{agressiveness}!DroneController@{Drone\-Controller}}
+\subsubsection[{agressiveness}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::agressiveness}\label{classDroneController_a31be26954a3c64e9fe17bc18ab01edbf}
+
+
+Definition at line 139 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!eighth\-Target\-Distance@{eighth\-Target\-Distance}}
+\index{eighth\-Target\-Distance@{eighth\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{eighth\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::eighth\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_aa5a7b90bfc650518c614e2a11714197c}
+
+
+Definition at line 72 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!fifth\-Target\-Distance@{fifth\-Target\-Distance}}
+\index{fifth\-Target\-Distance@{fifth\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{fifth\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::fifth\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a4bf9791cf751869c8a089ae64c72a5c7}
+
+
+Definition at line 69 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!first\-Target\-Distance@{first\-Target\-Distance}}
+\index{first\-Target\-Distance@{first\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{first\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::first\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a73aad5172180234c92d5e2d19d4e89ae}
+
+
+Definition at line 65 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!fourth\-Target\-Distance@{fourth\-Target\-Distance}}
+\index{fourth\-Target\-Distance@{fourth\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{fourth\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::fourth\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a9b704e47ebf7fcf4bf01874cee391b17}
+
+
+Definition at line 68 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!hover\-Command@{hover\-Command}}
+\index{hover\-Command@{hover\-Command}!DroneController@{Drone\-Controller}}
+\subsubsection[{hover\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\-Command} Drone\-Controller\-::hover\-Command\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a8cca18bcd4f446c8d9716b3398c30f33}
+
+
+Definition at line 86 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!i\-\_\-term@{i\-\_\-term}}
+\index{i\-\_\-term@{i\-\_\-term}!DroneController@{Drone\-Controller}}
+\subsubsection[{i\-\_\-term}]{\setlength{\rightskip}{0pt plus 5cm}Too\-N\-::\-Vector$<$4$>$ Drone\-Controller\-::i\-\_\-term\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_acf840365bb5295e87015ac84c60aff58}
+
+
+Definition at line 80 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!initial\-Distance@{initial\-Distance}}
+\index{initial\-Distance@{initial\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{initial\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::initial\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a8435861a9eaabc5c92b8b6021dba6cd0}
+
+
+Definition at line 64 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!initial\-Flyed@{initial\-Flyed}}
+\index{initial\-Flyed@{initial\-Flyed}!DroneController@{Drone\-Controller}}
+\subsubsection[{initial\-Flyed}]{\setlength{\rightskip}{0pt plus 5cm}bool Drone\-Controller\-::initial\-Flyed\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a67f91259be86d723e5b7627097e8b3cc}
+
+
+Definition at line 63 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!input\-Yaw@{input\-Yaw}}
+\index{input\-Yaw@{input\-Yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{input\-Yaw}]{\setlength{\rightskip}{0pt plus 5cm}float Drone\-Controller\-::input\-Yaw[3]}\label{classDroneController_ae32af48b304ec41cedc8ff2c3cf32c68}
+
+
+Definition at line 156 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Kd\-\_\-gaz@{Kd\-\_\-gaz}}
+\index{Kd\-\_\-gaz@{Kd\-\_\-gaz}!DroneController@{Drone\-Controller}}
+\subsubsection[{Kd\-\_\-gaz}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Kd\-\_\-gaz}\label{classDroneController_a65e8aa59edf1c5814c249af9bc544f00}
+
+
+Definition at line 146 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Kd\-\_\-rp@{Kd\-\_\-rp}}
+\index{Kd\-\_\-rp@{Kd\-\_\-rp}!DroneController@{Drone\-Controller}}
+\subsubsection[{Kd\-\_\-rp}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Kd\-\_\-rp}\label{classDroneController_abd40362b2025067b1cb5a0c3a3faa037}
+
+
+Definition at line 150 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Kd\-\_\-yaw@{Kd\-\_\-yaw}}
+\index{Kd\-\_\-yaw@{Kd\-\_\-yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{Kd\-\_\-yaw}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Kd\-\_\-yaw}\label{classDroneController_a3b9e1f76cd122f48bfe332dc37e0ba64}
+
+
+Definition at line 142 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Ki\-\_\-gaz@{Ki\-\_\-gaz}}
+\index{Ki\-\_\-gaz@{Ki\-\_\-gaz}!DroneController@{Drone\-Controller}}
+\subsubsection[{Ki\-\_\-gaz}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Ki\-\_\-gaz}\label{classDroneController_a19d01dd0da6ab4bf0cce05597184aa29}
+
+
+Definition at line 145 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Ki\-\_\-rp@{Ki\-\_\-rp}}
+\index{Ki\-\_\-rp@{Ki\-\_\-rp}!DroneController@{Drone\-Controller}}
+\subsubsection[{Ki\-\_\-rp}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Ki\-\_\-rp}\label{classDroneController_aa3b81417243257765cb81098e714e093}
+
+
+Definition at line 149 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Ki\-\_\-yaw@{Ki\-\_\-yaw}}
+\index{Ki\-\_\-yaw@{Ki\-\_\-yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{Ki\-\_\-yaw}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Ki\-\_\-yaw}\label{classDroneController_aa6037bdb5a68f93f91abfae269647714}
+
+
+Definition at line 141 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Kp\-\_\-gaz@{Kp\-\_\-gaz}}
+\index{Kp\-\_\-gaz@{Kp\-\_\-gaz}!DroneController@{Drone\-Controller}}
+\subsubsection[{Kp\-\_\-gaz}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Kp\-\_\-gaz}\label{classDroneController_ac96837f4eaa12f42baccf933d2a62f5b}
+
+
+Definition at line 147 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Kp\-\_\-rp@{Kp\-\_\-rp}}
+\index{Kp\-\_\-rp@{Kp\-\_\-rp}!DroneController@{Drone\-Controller}}
+\subsubsection[{Kp\-\_\-rp}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Kp\-\_\-rp}\label{classDroneController_a089601f41d62e473b4b041ebca9fed42}
+
+
+Definition at line 151 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!Kp\-\_\-yaw@{Kp\-\_\-yaw}}
+\index{Kp\-\_\-yaw@{Kp\-\_\-yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{Kp\-\_\-yaw}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::\-Kp\-\_\-yaw}\label{classDroneController_a7a1cf2b24cd7b0d728e5120bd837b121}
+
+
+Definition at line 143 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!last\-\_\-err@{last\-\_\-err}}
+\index{last\-\_\-err@{last\-\_\-err}!DroneController@{Drone\-Controller}}
+\subsubsection[{last\-\_\-err}]{\setlength{\rightskip}{0pt plus 5cm}Too\-N\-::\-Vector$<$4$>$ Drone\-Controller\-::last\-\_\-err\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a12a9b8b9b607ca0d4d6212cbd578b511}
+
+
+Definition at line 81 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!last\-Sent\-Control@{last\-Sent\-Control}}
+\index{last\-Sent\-Control@{last\-Sent\-Control}!DroneController@{Drone\-Controller}}
+\subsubsection[{last\-Sent\-Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\-Command} Drone\-Controller\-::last\-Sent\-Control\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_abf751360fed2ff00bd711849a90a53d0}
+
+
+Definition at line 58 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!last\-Time\-Stamp@{last\-Time\-Stamp}}
+\index{last\-Time\-Stamp@{last\-Time\-Stamp}!DroneController@{Drone\-Controller}}
+\subsubsection[{last\-Time\-Stamp}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::last\-Time\-Stamp\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a2e28a2a5ab280ef3f5cd1e2ace2872f7}
+
+
+Definition at line 84 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!logdata@{logdata}}
+\index{logdata@{logdata}!DroneController@{Drone\-Controller}}
+\subsubsection[{logdata}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ Drone\-Controller\-::logdata}\label{classDroneController_a8550905c392231257cd0c4acfc78c85b}
+
+
+Definition at line 126 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!log\-Info@{log\-Info}}
+\index{log\-Info@{log\-Info}!DroneController@{Drone\-Controller}}
+\subsubsection[{log\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Too\-N\-::\-Vector$<$28$>$ Drone\-Controller\-::log\-Info}\label{classDroneController_a855a97fa56a44fd2d5e122426fb76c26}
+
+
+Definition at line 111 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!log\-Label@{log\-Label}}
+\index{log\-Label@{log\-Label}!DroneController@{Drone\-Controller}}
+\subsubsection[{log\-Label}]{\setlength{\rightskip}{0pt plus 5cm}char Drone\-Controller\-::log\-Label[100]}\label{classDroneController_ab5e91b65bb1ebe5b77673c264d3e7525}
+
+
+Definition at line 127 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!max\-\_\-gaz\-\_\-drop@{max\-\_\-gaz\-\_\-drop}}
+\index{max\-\_\-gaz\-\_\-drop@{max\-\_\-gaz\-\_\-drop}!DroneController@{Drone\-Controller}}
+\subsubsection[{max\-\_\-gaz\-\_\-drop}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::max\-\_\-gaz\-\_\-drop}\label{classDroneController_a734f06d0088d0aa2d0ba3acbf945a5ef}
+
+
+Definition at line 136 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!max\-\_\-gaz\-\_\-rise@{max\-\_\-gaz\-\_\-rise}}
+\index{max\-\_\-gaz\-\_\-rise@{max\-\_\-gaz\-\_\-rise}!DroneController@{Drone\-Controller}}
+\subsubsection[{max\-\_\-gaz\-\_\-rise}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::max\-\_\-gaz\-\_\-rise}\label{classDroneController_ae95d7d6e281d1d4015b0de12c54282e1}
+
+
+Definition at line 135 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!max\-\_\-rp@{max\-\_\-rp}}
+\index{max\-\_\-rp@{max\-\_\-rp}!DroneController@{Drone\-Controller}}
+\subsubsection[{max\-\_\-rp}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::max\-\_\-rp}\label{classDroneController_a80d7dda3b8539d7c7f91fbc22154f15b}
+
+
+Definition at line 134 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!max\-\_\-yaw@{max\-\_\-yaw}}
+\index{max\-\_\-yaw@{max\-\_\-yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{max\-\_\-yaw}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::max\-\_\-yaw}\label{classDroneController_ab78c3fb33c786cae9ddd92f2fb9ac2f6}
+
+
+Definition at line 133 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!mofs\-Yaw@{mofs\-Yaw}}
+\index{mofs\-Yaw@{mofs\-Yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{mofs\-Yaw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-O\-F\-S\-Model\-::\-M\-O\-F\-S\-Model}$\ast$ Drone\-Controller\-::mofs\-Yaw}\label{classDroneController_a7e477128c075463c66ae612b75c72bf8}
+
+
+Definition at line 103 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!nineth\-Target\-Distance@{nineth\-Target\-Distance}}
+\index{nineth\-Target\-Distance@{nineth\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{nineth\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::nineth\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_aeafca540b464ef6ecb100a2006556023}
+
+
+Definition at line 73 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!node@{node}}
+\index{node@{node}!DroneController@{Drone\-Controller}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}Control\-Node$\ast$ Drone\-Controller\-::node}\label{classDroneController_a748e14506b8033c62b1bfb695e52c79e}
+
+
+Definition at line 100 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!output\-Yaw@{output\-Yaw}}
+\index{output\-Yaw@{output\-Yaw}!DroneController@{Drone\-Controller}}
+\subsubsection[{output\-Yaw}]{\setlength{\rightskip}{0pt plus 5cm}float Drone\-Controller\-::output\-Yaw}\label{classDroneController_a5018f016f55e89ec2babf6e4623d67f7}
+
+
+Definition at line 157 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!ptam\-Is\-Good@{ptam\-Is\-Good}}
+\index{ptam\-Is\-Good@{ptam\-Is\-Good}!DroneController@{Drone\-Controller}}
+\subsubsection[{ptam\-Is\-Good}]{\setlength{\rightskip}{0pt plus 5cm}bool Drone\-Controller\-::ptam\-Is\-Good\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a3aaa484281bcd83c13e446fcf93ca09b}
+
+
+Definition at line 91 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!rise\-\_\-fac@{rise\-\_\-fac}}
+\index{rise\-\_\-fac@{rise\-\_\-fac}!DroneController@{Drone\-Controller}}
+\subsubsection[{rise\-\_\-fac}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::rise\-\_\-fac}\label{classDroneController_a71893a0f3625c701e5d7298c76c6245b}
+
+
+Definition at line 138 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!scale\-Accuracy@{scale\-Accuracy}}
+\index{scale\-Accuracy@{scale\-Accuracy}!DroneController@{Drone\-Controller}}
+\subsubsection[{scale\-Accuracy}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::scale\-Accuracy\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_af9cc50a89d8d16083d92ad8aa05eca5c}
+
+
+Definition at line 92 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!second\-Target\-Distance@{second\-Target\-Distance}}
+\index{second\-Target\-Distance@{second\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{second\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::second\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_af0d4203b36f5803740d2be5e8880f277}
+
+
+Definition at line 66 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!seventh\-Target\-Distance@{seventh\-Target\-Distance}}
+\index{seventh\-Target\-Distance@{seventh\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{seventh\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::seventh\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_adebcf53e98351ce1464b0b2a9cac4c31}
+
+
+Definition at line 71 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!sixth\-Target\-Distance@{sixth\-Target\-Distance}}
+\index{sixth\-Target\-Distance@{sixth\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{sixth\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::sixth\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a4cf408d35a30ad1f0ad6ecf136b91cb0}
+
+
+Definition at line 70 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!speed\-Averages@{speed\-Averages}}
+\index{speed\-Averages@{speed\-Averages}!DroneController@{Drone\-Controller}}
+\subsubsection[{speed\-Averages}]{\setlength{\rightskip}{0pt plus 5cm}Too\-N\-::\-Vector$<$4$>$ Drone\-Controller\-::speed\-Averages\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a22ec6cb6144ad3f3e01c70149f21b837}
+
+
+Definition at line 82 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!target@{target}}
+\index{target@{target}!DroneController@{Drone\-Controller}}
+\subsubsection[{target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Drone\-Position} Drone\-Controller\-::target\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a3d6b5c89976fa9655f6033eb53eaed5f}
+
+
+Definition at line 61 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!target\-New@{target\-New}}
+\index{target\-New@{target\-New}!DroneController@{Drone\-Controller}}
+\subsubsection[{target\-New}]{\setlength{\rightskip}{0pt plus 5cm}Too\-N\-::\-Vector$<$4$>$ Drone\-Controller\-::target\-New\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a137a8270654cc9b7e280f237ddd14731}
+
+
+Definition at line 76 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!target\-Set\-At\-Clock@{target\-Set\-At\-Clock}}
+\index{target\-Set\-At\-Clock@{target\-Set\-At\-Clock}!DroneController@{Drone\-Controller}}
+\subsubsection[{target\-Set\-At\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::target\-Set\-At\-Clock\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a5b2dac7ef8936abc7aed98697879db23}
+
+
+Definition at line 85 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!target\-Valid@{target\-Valid}}
+\index{target\-Valid@{target\-Valid}!DroneController@{Drone\-Controller}}
+\subsubsection[{target\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Drone\-Controller\-::target\-Valid\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_af899315cbafbe2592df555e6a46db969}
+
+
+Definition at line 62 of file Drone\-Controller.\-h.
+
+\index{Drone\-Controller@{Drone\-Controller}!third\-Target\-Distance@{third\-Target\-Distance}}
+\index{third\-Target\-Distance@{third\-Target\-Distance}!DroneController@{Drone\-Controller}}
+\subsubsection[{third\-Target\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double Drone\-Controller\-::third\-Target\-Distance\hspace{0.3cm}{\ttfamily [private]}}\label{classDroneController_a2e31247cdb0c292bb377e6e017ebc898}
+
+
+Definition at line 67 of file Drone\-Controller.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf Drone\-Controller.\-h}\item 
+{\bf Drone\-Controller.\-cpp}\end{DoxyCompactItemize}

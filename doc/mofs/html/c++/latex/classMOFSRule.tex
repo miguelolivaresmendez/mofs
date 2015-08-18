@@ -1,0 +1,502 @@
+\section{M\-O\-F\-S\-Rule Class Reference}
+\label{classMOFSRule}\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}}
+
+
+{\ttfamily \#include $<$M\-O\-F\-S\-Rule.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Set}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf Bit\-Act} ()
+\begin{DoxyCompactList}\small\item\em return the of times this rules was activated \end{DoxyCompactList}\item 
+char {\bf compare} (char \-\_\-inputs[$\,$])
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: compare \end{DoxyCompactList}\item 
+void {\bf Inc\-Bit\-Act} ()
+\begin{DoxyCompactList}\small\item\em increment by 1 of the times that this rule is used \end{DoxyCompactList}\item 
+void {\bf init} ()
+\begin{DoxyCompactList}\small\item\em Initialize the rule weight. \end{DoxyCompactList}\item 
+char {\bf input0} ()
+\begin{DoxyCompactList}\small\item\em return the specific value of the first input \end{DoxyCompactList}\item 
+char {\bf input1} ()
+\begin{DoxyCompactList}\small\item\em return the specific value of the second input \end{DoxyCompactList}\item 
+char {\bf input2} ()
+\begin{DoxyCompactList}\small\item\em return the specific value of the third input \end{DoxyCompactList}\item 
+void {\bf inputs\-\_\-array} (char \-\_\-inputs[$\,$])
+\begin{DoxyCompactList}\small\item\em store the values of the inputs of each specific situation \end{DoxyCompactList}\item 
+{\bf M\-O\-F\-S\-Rule} (int num\-\_\-inputs\-\_\-, char \-\_\-inputs[$\,$], char \-\_\-output)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: \doxyref{M\-O\-F\-S\-Rule}{p.}{classMOFSRule} \end{DoxyCompactList}\item 
+{\bf M\-O\-F\-S\-Rule} (int num\-\_\-inputs\-\_\-, char \-\_\-inputs[$\,$], char \-\_\-output, float \-\_\-weight)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: \doxyref{M\-O\-F\-S\-Rule}{p.}{classMOFSRule} \end{DoxyCompactList}\item 
+int {\bf num\-\_\-inputs} ()
+\begin{DoxyCompactList}\small\item\em return the number of input of this rule \end{DoxyCompactList}\item 
+char {\bf output\-Value} ()
+\begin{DoxyCompactList}\small\item\em return the output value of this rule \end{DoxyCompactList}\item 
+void {\bf Sets} (void $\ast$sets)
+\item 
+int {\bf update\-Output} (char \-\_\-output)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: update\-Output \end{DoxyCompactList}\item 
+int {\bf update\-Weight} (char \-\_\-inputs[$\,$], char \-\_\-output[$\,$], float output\-\_\-values[$\,$], int \-\_\-num\-\_\-inputs)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: update\-Weight \end{DoxyCompactList}\item 
+float {\bf Weight} ()
+\begin{DoxyCompactList}\small\item\em return the weight assigned to a specific rule \end{DoxyCompactList}\item 
+{\bf $\sim$\-M\-O\-F\-S\-Rule} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: $\sim$\-M\-O\-F\-S\-Rule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf bit\-\_\-act}
+\item 
+{\bf Set} $\ast$ {\bf data}
+\item 
+float {\bf decrem}
+\item 
+float {\bf increm}
+\item 
+char $\ast$ {\bf inputs}
+\item 
+char {\bf ipts}
+\item 
+int {\bf max\-\_\-gens}
+\item 
+char {\bf output}
+\item 
+float {\bf weight}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 32 of file M\-O\-F\-S\-Rule.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}}
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{M\-O\-F\-S\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Rule\-::\-M\-O\-F\-S\-Rule (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-\_\-inputs\-\_\-, }
+\item[{char}]{\-\_\-inputs[$\,$], }
+\item[{char}]{\-\_\-output}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a6aceb592fa68259a2476dfca7a9aaf93}
+
+
+
+
+ Function\-: \doxyref{M\-O\-F\-S\-Rule}{p.}{classMOFSRule} 
+
+\begin{DoxyVerb}    Purpose:        1st constructor.
+
+    Arguments:      int num_inputs_, char _inputs[],char _output
+
+    Returns:        nothing
+
+    Comments:       Insert all the data of the inputs and the output
+                            and put the default value of weight
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 55 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}}
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{M\-O\-F\-S\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Rule\-::\-M\-O\-F\-S\-Rule (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-\_\-inputs\-\_\-, }
+\item[{char}]{\-\_\-inputs[$\,$], }
+\item[{char}]{\-\_\-output, }
+\item[{float}]{\-\_\-weight}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a366c0fd907c49a81733ff9a56334e904}
+
+
+
+
+ Function\-: \doxyref{M\-O\-F\-S\-Rule}{p.}{classMOFSRule} 
+
+\begin{DoxyVerb}    Purpose:        2nd constructor.
+
+    Arguments:      int num_inputs_, char _inputs[], char _output, float _weight
+
+    Returns:        nothing
+
+    Comments:       Insert all the data of the inputs, the output
+                            and the value of weight
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 104 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!$\sim$\-M\-O\-F\-S\-Rule@{$\sim$\-M\-O\-F\-S\-Rule}}
+\index{$\sim$\-M\-O\-F\-S\-Rule@{$\sim$\-M\-O\-F\-S\-Rule}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{$\sim$\-M\-O\-F\-S\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Rule\-::$\sim$\-M\-O\-F\-S\-Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_afee4ec6ac864908448ee88b301698cdf}
+
+
+
+
+ Function\-: $\sim$\-M\-O\-F\-S\-Rule 
+
+\begin{DoxyVerb}    Purpose:        destructor.
+
+    Arguments:      none
+
+    Returns:        nothing
+
+    Comments:       This action is done it by the RuleStore
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 156 of file M\-O\-F\-S\-Rule.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!Bit\-Act@{Bit\-Act}}
+\index{Bit\-Act@{Bit\-Act}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{Bit\-Act}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Rule\-::\-Bit\-Act (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a879c89266d1ddbdae4b2eef1b4b24397}
+
+
+return the of times this rules was activated 
+
+
+
+Definition at line 322 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!compare@{compare}}
+\index{compare@{compare}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{compare}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::compare (
+\begin{DoxyParamCaption}
+\item[{char}]{\-\_\-inputs[$\,$]}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a056f33ef6d993314febceeba1925bfdb}
+
+
+
+
+ Function\-: compare 
+
+\begin{DoxyVerb}    Purpose:        Compare if the selected rule have the same inputs that one passed as argument
+
+    Arguments:      char _inputs[]
+
+    Returns:        char    --->    the set value of the output
+
+    Comments:       return the output value if the selected rule is the one with the same inputs of the argument,
+                            otherwise return 'Z' (zero)
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 275 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!Inc\-Bit\-Act@{Inc\-Bit\-Act}}
+\index{Inc\-Bit\-Act@{Inc\-Bit\-Act}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{Inc\-Bit\-Act}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Rule\-::\-Inc\-Bit\-Act (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_af000140a606651c765b339877935318a}
+
+
+increment by 1 of the times that this rule is used 
+
+
+
+Definition at line 303 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!init@{init}}
+\index{init@{init}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Rule\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a9466baffd03ee0ec7015663f538f2b67}
+
+
+Initialize the rule weight. 
+
+
+
+Definition at line 350 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!input0@{input0}}
+\index{input0@{input0}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{input0}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::input0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_aac720b8f6055c23c45b009eca79aecf0}
+
+
+return the specific value of the first input 
+
+
+
+Definition at line 356 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!input1@{input1}}
+\index{input1@{input1}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{input1}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::input1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a53f778b5ef9362e0e15c26886ef43471}
+
+
+return the specific value of the second input 
+
+
+
+Definition at line 362 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!input2@{input2}}
+\index{input2@{input2}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{input2}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::input2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a77e6c92cd03443458b203ce4bada4d74}
+
+
+return the specific value of the third input 
+
+
+
+Definition at line 368 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!inputs\-\_\-array@{inputs\-\_\-array}}
+\index{inputs\-\_\-array@{inputs\-\_\-array}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{inputs\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Rule\-::inputs\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{char}]{\-\_\-inputs[$\,$]}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a328682458ad9f1e5d6367b31111c90b6}
+
+
+store the values of the inputs of each specific situation 
+
+
+
+Definition at line 329 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!num\-\_\-inputs@{num\-\_\-inputs}}
+\index{num\-\_\-inputs@{num\-\_\-inputs}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{num\-\_\-inputs}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Rule\-::num\-\_\-inputs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_af66e685852c22304b4d35646a99dd6d2}
+
+
+return the number of input of this rule 
+
+
+
+Definition at line 344 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!output\-Value@{output\-Value}}
+\index{output\-Value@{output\-Value}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{output\-Value}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::output\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_adef43b9e04fa74b8e12d71c28a78aded}
+
+
+return the output value of this rule 
+
+
+
+Definition at line 337 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!Sets@{Sets}}
+\index{Sets@{Sets}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{Sets}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Rule\-::\-Sets (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{sets}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_ab7bb3492a1e178c244e72782235b0d7c}
+
+
+Definition at line 296 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!update\-Output@{update\-Output}}
+\index{update\-Output@{update\-Output}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{update\-Output}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Rule\-::update\-Output (
+\begin{DoxyParamCaption}
+\item[{char}]{\-\_\-output}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_aee0456aac6757ccfdcebba4371781dc6}
+
+
+
+
+ Function\-: update\-Output 
+
+\begin{DoxyVerb}    Purpose:        change the output value
+
+    Arguments:      char _output
+
+    Returns:        int     -1      --->    error
+                                     1      --->    otherwise
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 250 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!update\-Weight@{update\-Weight}}
+\index{update\-Weight@{update\-Weight}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{update\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Rule\-::update\-Weight (
+\begin{DoxyParamCaption}
+\item[{char}]{\-\_\-inputs[$\,$], }
+\item[{char}]{\-\_\-output[$\,$], }
+\item[{float}]{output\-\_\-values[$\,$], }
+\item[{int}]{\-\_\-num\-\_\-inputs}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a6f0a3d9a8f547a10a71be2216745caed}
+
+
+
+
+ Function\-: update\-Weight 
+
+\begin{DoxyVerb}    Purpose:        Increase or decreas the weight of the rule that was selected
+
+    Arguments:      char _inputs[], char _output[], float output_values[], int _num_inputs
+
+    Returns:        int      1      --->    weight has been modified
+                                     1      --->    not modified
+
+    Comments:       If all the values are equals increment the weight 0.2,
+                            If just the inputs are equals decrease the weight 0.1
+                            otherwise don't do nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 175 of file M\-O\-F\-S\-Rule.\-cpp.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!Weight@{Weight}}
+\index{Weight@{Weight}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{Weight}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Rule\-::\-Weight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classMOFSRule_a2974f43ecec7a022007ca376105f91e3}
+
+
+return the weight assigned to a specific rule 
+
+
+
+Definition at line 316 of file M\-O\-F\-S\-Rule.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!bit\-\_\-act@{bit\-\_\-act}}
+\index{bit\-\_\-act@{bit\-\_\-act}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{bit\-\_\-act}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Rule\-::bit\-\_\-act\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_a9e6bd92aa9bac99122543600df0ae7ab}
+
+
+Definition at line 47 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!data@{data}}
+\index{data@{data}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set}$\ast$ M\-O\-F\-S\-Rule\-::data\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_a4ae9b73ca841fac230a369cc43dd216b}
+
+
+Definition at line 45 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!decrem@{decrem}}
+\index{decrem@{decrem}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{decrem}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Rule\-::decrem\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_ac366a8cc1339bd29eea11eadb9f3c114}
+
+
+Definition at line 49 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!increm@{increm}}
+\index{increm@{increm}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{increm}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Rule\-::increm\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_a57dfc95445bef6944095bd6eefd3254a}
+
+
+Definition at line 49 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!inputs@{inputs}}
+\index{inputs@{inputs}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{inputs}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ M\-O\-F\-S\-Rule\-::inputs\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_a2a0a0655eb9d9e88ed1c6ef6dd2d950f}
+
+
+Definition at line 50 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!ipts@{ipts}}
+\index{ipts@{ipts}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{ipts}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::ipts\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_aca916d64689998ee265bd6c0c8e545a1}
+
+
+Definition at line 51 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!max\-\_\-gens@{max\-\_\-gens}}
+\index{max\-\_\-gens@{max\-\_\-gens}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{max\-\_\-gens}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Rule\-::max\-\_\-gens\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_ad5c253f85f0220563b9791516b921490}
+
+
+Definition at line 44 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!output@{output}}
+\index{output@{output}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}char M\-O\-F\-S\-Rule\-::output\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_ac0bae2f4c4da51658b1dbe8e777967a7}
+
+
+Definition at line 52 of file M\-O\-F\-S\-Rule.\-h.
+
+\index{M\-O\-F\-S\-Rule@{M\-O\-F\-S\-Rule}!weight@{weight}}
+\index{weight@{weight}!MOFSRule@{M\-O\-F\-S\-Rule}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Rule\-::weight\hspace{0.3cm}{\ttfamily [private]}}\label{classMOFSRule_a99f41913b3cae467cd547927a73410be}
+
+
+Definition at line 46 of file M\-O\-F\-S\-Rule.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf M\-O\-F\-S\-Rule.\-h}\item 
+{\bf M\-O\-F\-S\-Rule.\-cpp}\end{DoxyCompactItemize}

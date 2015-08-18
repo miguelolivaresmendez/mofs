@@ -1,0 +1,838 @@
+\section{mofs\-:\-:M\-O\-F\-S\-Model Class Reference}
+\label{classmofs_1_1MOFSModel}\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}}
+
+
+{\ttfamily \#include $<$M\-O\-F\-S\-Model.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf Action} (float $\ast$\-\_\-output)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: Action \end{DoxyCompactList}\item 
+int {\bf gen\-Rulebase} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: gen\-Rule\-Base \end{DoxyCompactList}\item 
+void {\bf get\-Valid\-Rules} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: get\-Valid\-Rules \end{DoxyCompactList}\item 
+void {\bf guarda\-Pos} (float x, float y)
+\item 
+void {\bf init\-Rulestore} ()
+\item 
+float {\bf input\-Irq} (float inputs[$\,$], float $\ast$\-\_\-output)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: input\-Irq \end{DoxyCompactList}\item 
+int {\bf learning} (char $\ast$file)
+\item 
+int {\bf load\-Vars} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: load\-Vars \end{DoxyCompactList}\item 
+{\bf M\-O\-F\-S\-Model} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: \doxyref{M\-O\-F\-S\-Model}{p.}{classmofs_1_1MOFSModel} \end{DoxyCompactList}\item 
+void {\bf open1} (int \-\_\-mode)
+\item 
+void {\bf open2} (char $\ast$file\-Vars, char $\ast${\bf file\-Rules}, int \-\_\-mode, int gen\-Rules, int option4\-Create\-Vars)
+\item 
+void {\bf read\-Data} (float \&max\-\_\-x, float \&min\-\_\-x, int \&crisp)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: read\-Data \end{DoxyCompactList}\item 
+int {\bf read\-Rulebase} (F\-I\-L\-E $\ast$file\-\_\-in)
+\item 
+int {\bf read\-Vars} (F\-I\-L\-E $\ast$file\-\_\-in, int option4\-Create\-Vars)
+\item 
+void {\bf save\-Model} (char $\ast$file)
+\item 
+void {\bf show\-Rules} ()
+\item 
+void {\bf show\-Vars} ()
+\item 
+{\bf $\sim$\-M\-O\-F\-S\-Model} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: $\sim$\-M\-O\-F\-S\-Model \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf check\-Output} (float $\ast$\-\_\-output)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: check\-Output \end{DoxyCompactList}\item 
+void {\bf gen\-Rule} (char inputs[$\,$], {\bf Vars\-Node} $\ast$aux, int cont\-\_\-vars)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: gen\-Rule \end{DoxyCompactList}\item 
+void {\bf insert\-Rule\-Var} ({\bf Rule\-Values} $\ast$\&r\-\_\-values, {\bf Rule\-Values} $\ast$rv)
+\item 
+void {\bf insert\-Var} ({\bf Vars\-Node} $\ast$new\-\_\-var, char option)
+\item 
+void {\bf save\-Rule} (char ipts[$\,$], char rule\-\_\-output, float weight)
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: save\-Rule \end{DoxyCompactList}\item 
+void {\bf Save\-Weight\-Stats} ()
+\item 
+void {\bf update\-Rules} ()
+\begin{DoxyCompactList}\small\item\em 
+
+ Function\-: update\-Rules \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-L\-E $\ast$ {\bf A\-\_\-output}
+\item 
+F\-I\-L\-E $\ast$ {\bf A\-\_\-rules\-\_\-\-N}
+\item 
+F\-I\-L\-E $\ast$ {\bf A\-\_\-rules\-\_\-\-S}
+\item 
+F\-I\-L\-E $\ast$ {\bf B\-\_\-output}
+\item 
+F\-I\-L\-E $\ast$ {\bf B\-\_\-rules\-\_\-\-N}
+\item 
+F\-I\-L\-E $\ast$ {\bf B\-\_\-rules\-\_\-\-S}
+\item 
+F\-I\-L\-E $\ast$ {\bf C\-\_\-output}
+\item 
+F\-I\-L\-E $\ast$ {\bf C\-\_\-rules\-\_\-\-N}
+\item 
+F\-I\-L\-E $\ast$ {\bf C\-\_\-rules\-\_\-\-S}
+\item 
+F\-I\-L\-E $\ast$ {\bf D\-\_\-output}
+\item 
+F\-I\-L\-E $\ast$ {\bf D\-\_\-rules\-\_\-\-N}
+\item 
+F\-I\-L\-E $\ast$ {\bf D\-\_\-rules\-\_\-\-S}
+\item 
+{\bf M\-O\-F\-S\-M\-C\-Defuzz} $\ast$ {\bf defuzz\-\_\-method}
+\item 
+F\-I\-L\-E $\ast$ {\bf error\-\_\-out}
+\item 
+{\bf Vars\-Node} $\ast$ {\bf fuzzy\-\_\-input\-\_\-vars}
+\item 
+{\bf Vars\-Node} $\ast$ {\bf fuzzy\-\_\-output\-\_\-vars}
+\item 
+float $\ast$ {\bf inputs\-Vars}
+\item 
+int {\bf mode}
+\item 
+int {\bf num\-\_\-inputs}
+\item 
+int {\bf num\-\_\-vars}
+\item 
+float {\bf output}
+\item 
+F\-I\-L\-E $\ast$ {\bf pesos}
+\item 
+{\bf Rule\-Data} $\ast$ {\bf rule\-\_\-data\-\_\-list}
+\item 
+{\bf Rule\-Node} $\ast$ {\bf rule\-\_\-store}
+\item 
+char {\bf set\-\_\-output}
+\item 
+F\-I\-L\-E $\ast$ {\bf var1}
+\item 
+F\-I\-L\-E $\ast$ {\bf vars\-\_\-out}
+\item 
+F\-I\-L\-E $\ast$ {\bf xpos\-\_\-file}
+\item 
+F\-I\-L\-E $\ast$ {\bf ypos\-\_\-file}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class \doxyref{M\-O\-F\-S\-Model}{p.}{classmofs_1_1MOFSModel}. This is the main class of this Fuzzy controllers creation software. It held all the variables, rules, and functions to fuzzyfication and defuzzyfication 
+
+Definition at line 99 of file M\-O\-F\-S\-Model.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!M\-O\-F\-S\-Model@{M\-O\-F\-S\-Model}}
+\index{M\-O\-F\-S\-Model@{M\-O\-F\-S\-Model}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{M\-O\-F\-S\-Model}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Model\-::\-M\-O\-F\-S\-Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a2bdf10a9c3bb27aa53f979ac5d4dc558}
+
+
+
+
+ Function\-: \doxyref{M\-O\-F\-S\-Model}{p.}{classmofs_1_1MOFSModel} 
+
+\begin{DoxyVerb}    Purpose:        constructor.
+
+    Arguments:      none
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 47 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!$\sim$\-M\-O\-F\-S\-Model@{$\sim$\-M\-O\-F\-S\-Model}}
+\index{$\sim$\-M\-O\-F\-S\-Model@{$\sim$\-M\-O\-F\-S\-Model}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{$\sim$\-M\-O\-F\-S\-Model}]{\setlength{\rightskip}{0pt plus 5cm}M\-O\-F\-S\-Model\-::$\sim$\-M\-O\-F\-S\-Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a15b048b48e74581f758a88c51e7e1ea6}
+
+
+
+
+ Function\-: $\sim$\-M\-O\-F\-S\-Model 
+
+\begin{DoxyVerb}    Purpose:        desconstructor.
+
+    Arguments:      none
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 61 of file M\-O\-F\-S\-Model.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!Action@{Action}}
+\index{Action@{Action}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{Action}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Model\-::\-Action (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{\-\_\-output}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a7b9abe313b9de323845bf0813d658c67}
+
+
+
+
+ Function\-: Action 
+
+\begin{DoxyVerb}    Purpose:        take from the defuzzification model the output
+
+    Arguments:      none
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 738 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!check\-Output@{check\-Output}}
+\index{check\-Output@{check\-Output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{check\-Output}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Model\-::check\-Output (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{\-\_\-output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a6f050375b9347414ea4e8029b39e1a6e}
+
+
+
+
+ Function\-: check\-Output 
+
+\begin{DoxyVerb}    Purpose:        Ask to the user if it not correct
+
+    Arguments:      none
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 772 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!gen\-Rule@{gen\-Rule}}
+\index{gen\-Rule@{gen\-Rule}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{gen\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::gen\-Rule (
+\begin{DoxyParamCaption}
+\item[{char}]{inputs\-\_\-[$\,$], }
+\item[{{\bf Vars\-Node} $\ast$}]{aux, }
+\item[{int}]{cont\-\_\-vars}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a99f4ef974f0056a533ddee53b7e869f9}
+
+
+
+
+ Function\-: gen\-Rule 
+
+\begin{DoxyVerb}    Purpose:        Generate each rule based on the input vars
+
+    Arguments:      none
+
+    Returns:        void
+\end{DoxyVerb}
+
+
+
+
+ 
+
+Definition at line 274 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!gen\-Rulebase@{gen\-Rulebase}}
+\index{gen\-Rulebase@{gen\-Rulebase}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{gen\-Rulebase}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Model\-::gen\-Rulebase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a2991bc845158d93913a9fa3e7b15add9}
+
+
+
+
+ Function\-: gen\-Rule\-Base 
+
+\begin{DoxyVerb}    Purpose:        Generate a full rule-base based on the input vars
+
+    Arguments:      none
+
+    Returns:        -1  --> error
+                            1       --> otherwise
+\end{DoxyVerb}
+
+
+
+
+ 
+
+Definition at line 312 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!get\-Valid\-Rules@{get\-Valid\-Rules}}
+\index{get\-Valid\-Rules@{get\-Valid\-Rules}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{get\-Valid\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::get\-Valid\-Rules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a530210aeb55ae24b3d22363cbd2df946}
+
+
+
+
+ Function\-: get\-Valid\-Rules 
+
+\begin{DoxyVerb}    Purpose:        get all the rules possibles based on the inputs
+
+    Arguments:      none
+
+    Returns:        int
+
+    Comments:       fill the rules in one array of rule_datas
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 429 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!guarda\-Pos@{guarda\-Pos}}
+\index{guarda\-Pos@{guarda\-Pos}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{guarda\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void mofs\-::\-M\-O\-F\-S\-Model\-::guarda\-Pos (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a00a6fcd8fbb222753a703fc8118353d7}
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!init\-Rulestore@{init\-Rulestore}}
+\index{init\-Rulestore@{init\-Rulestore}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{init\-Rulestore}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::init\-Rulestore (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a6343069f107e60d6d057fa43420f04a1}
+
+
+Definition at line 544 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!input\-Irq@{input\-Irq}}
+\index{input\-Irq@{input\-Irq}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{input\-Irq}]{\setlength{\rightskip}{0pt plus 5cm}float M\-O\-F\-S\-Model\-::input\-Irq (
+\begin{DoxyParamCaption}
+\item[{float}]{inputs[$\,$], }
+\item[{float $\ast$}]{\-\_\-output}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a2ceef293dd6b801d8c4dd1ddd0fe782b}
+
+
+
+
+ Function\-: input\-Irq 
+
+\begin{DoxyVerb}    Purpose:        Active function of the robot behavior
+
+    Arguments:      none
+
+    Returns:        system action
+
+    Comments:       fill in the rule_data array 
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 395 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!insert\-Rule\-Var@{insert\-Rule\-Var}}
+\index{insert\-Rule\-Var@{insert\-Rule\-Var}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{insert\-Rule\-Var}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::insert\-Rule\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf Rule\-Values} $\ast$\&}]{r\-\_\-values, }
+\item[{{\bf Rule\-Values} $\ast$}]{rv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a3434db0c0da5e33a522b59be03145420}
+
+
+Definition at line 468 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!insert\-Var@{insert\-Var}}
+\index{insert\-Var@{insert\-Var}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{insert\-Var}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::insert\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf Vars\-Node} $\ast$}]{new\-\_\-var, }
+\item[{char}]{option}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a62873eb5f02d986e31f706db2f48558e}
+
+
+Definition at line 159 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!learning@{learning}}
+\index{learning@{learning}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{learning}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Model\-::learning (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a101d0acde582330b98e9e4f5a6136e9d}
+
+
+Definition at line 352 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!load\-Vars@{load\-Vars}}
+\index{load\-Vars@{load\-Vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{load\-Vars}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Model\-::load\-Vars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a6cd386125e877d871ab876063faf8713}
+
+
+
+
+ Function\-: load\-Vars 
+
+\begin{DoxyVerb}    Purpose:        Read the main values for create the variables
+
+    Arguments:      none
+
+    Returns:        -1      -->     error
+                            1       --> otherwise
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 196 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!open1@{open1}}
+\index{open1@{open1}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{open1}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::open1 (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-mode}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a2f2fc649c33a7160c13bf606c9e8ded8}
+
+
+Definition at line 77 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!open2@{open2}}
+\index{open2@{open2}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{open2}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::open2 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\-Vars, }
+\item[{char $\ast$}]{file\-Rules, }
+\item[{int}]{\-\_\-mode, }
+\item[{int}]{gen\-Rules, }
+\item[{int}]{option4\-Create\-Vars}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a8c90cb16168e9d4e03317b9c78e7926f}
+
+
+Definition at line 97 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!read\-Data@{read\-Data}}
+\index{read\-Data@{read\-Data}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{read\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::read\-Data (
+\begin{DoxyParamCaption}
+\item[{float \&}]{max\-\_\-x, }
+\item[{float \&}]{min\-\_\-x, }
+\item[{int \&}]{crisp}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a4dd54abd79dc44f6bc2b146039568687}
+
+
+
+
+ Function\-: read\-Data 
+
+\begin{DoxyVerb}    Purpose:        Auxiliar function for read the values to create a variable
+
+    Arguments:      none
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 146 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!read\-Rulebase@{read\-Rulebase}}
+\index{read\-Rulebase@{read\-Rulebase}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{read\-Rulebase}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Model\-::read\-Rulebase (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a4adf88c6b4b00096f0b907c5f1e26f3d}
+
+
+Definition at line 327 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!read\-Vars@{read\-Vars}}
+\index{read\-Vars@{read\-Vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{read\-Vars}]{\setlength{\rightskip}{0pt plus 5cm}int M\-O\-F\-S\-Model\-::read\-Vars (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{file\-\_\-in, }
+\item[{int}]{option4\-Create\-Vars}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a180d059fde3ea5e725becb07185eaf13}
+
+
+Definition at line 235 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!save\-Model@{save\-Model}}
+\index{save\-Model@{save\-Model}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{save\-Model}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::save\-Model (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a21296b57f7e479ee2806a23b3fcaadcd}
+
+
+Definition at line 902 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!save\-Rule@{save\-Rule}}
+\index{save\-Rule@{save\-Rule}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{save\-Rule}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::save\-Rule (
+\begin{DoxyParamCaption}
+\item[{char}]{ipts[$\,$], }
+\item[{char}]{rule\-\_\-output, }
+\item[{float}]{\-\_\-weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_ad9b0447855e4fae9064504b9ca45637c}
+
+
+
+
+ Function\-: save\-Rule 
+
+\begin{DoxyVerb}    Purpose:        save the 2 set and y values of each valid rule
+
+    Arguments:      rule_sets       -->     the values of the rule
+
+    Returns:        int
+
+    Comments:       save the rules in one array of rule_datas structure
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 512 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!Save\-Weight\-Stats@{Save\-Weight\-Stats}}
+\index{Save\-Weight\-Stats@{Save\-Weight\-Stats}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{Save\-Weight\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::\-Save\-Weight\-Stats (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a5297ffef8cdc5c7833f554d6d07fab5b}
+
+
+Definition at line 552 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!show\-Rules@{show\-Rules}}
+\index{show\-Rules@{show\-Rules}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{show\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::show\-Rules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a2eff5c4e9e798e2d6bccab5fa2b3d4a6}
+
+
+Definition at line 483 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!show\-Vars@{show\-Vars}}
+\index{show\-Vars@{show\-Vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{show\-Vars}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::show\-Vars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classmofs_1_1MOFSModel_a748cbc78104cd144adef0cfcc999ba8d}
+
+
+Definition at line 873 of file M\-O\-F\-S\-Model.\-cpp.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!update\-Rules@{update\-Rules}}
+\index{update\-Rules@{update\-Rules}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{update\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}void M\-O\-F\-S\-Model\-::update\-Rules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a97982fefca2aec4e962eb199ff5f2fe2}
+
+
+
+
+ Function\-: update\-Rules 
+
+\begin{DoxyVerb}    Purpose:        update the weight and the output if it would be necesary
+
+    Arguments:      char user_option        -->     the correct output
+
+    Returns:        nothing
+\end{DoxyVerb}
+ 
+
+ 
+
+Definition at line 822 of file M\-O\-F\-S\-Model.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!A\-\_\-output@{A\-\_\-output}}
+\index{A\-\_\-output@{A\-\_\-output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{A\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-A\-\_\-output\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a47a567db8283066ab319264fa5f8a8f2}
+
+
+Definition at line 117 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!A\-\_\-rules\-\_\-\-N@{A\-\_\-rules\-\_\-\-N}}
+\index{A\-\_\-rules\-\_\-\-N@{A\-\_\-rules\-\_\-\-N}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{A\-\_\-rules\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-A\-\_\-rules\-\_\-\-N\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a338bb90adc4ebb0c5e053228e94accd3}
+
+
+Definition at line 115 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!A\-\_\-rules\-\_\-\-S@{A\-\_\-rules\-\_\-\-S}}
+\index{A\-\_\-rules\-\_\-\-S@{A\-\_\-rules\-\_\-\-S}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{A\-\_\-rules\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-A\-\_\-rules\-\_\-\-S\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a8e280be99301ea6cf79712a7b1038b6e}
+
+
+Definition at line 116 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!B\-\_\-output@{B\-\_\-output}}
+\index{B\-\_\-output@{B\-\_\-output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{B\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-B\-\_\-output\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_abbfb88ae107ef243522f47a48b8355f6}
+
+
+Definition at line 117 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!B\-\_\-rules\-\_\-\-N@{B\-\_\-rules\-\_\-\-N}}
+\index{B\-\_\-rules\-\_\-\-N@{B\-\_\-rules\-\_\-\-N}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{B\-\_\-rules\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-B\-\_\-rules\-\_\-\-N\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_ad5b8a7b362328956c37876d5bc593f3d}
+
+
+Definition at line 115 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!B\-\_\-rules\-\_\-\-S@{B\-\_\-rules\-\_\-\-S}}
+\index{B\-\_\-rules\-\_\-\-S@{B\-\_\-rules\-\_\-\-S}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{B\-\_\-rules\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-B\-\_\-rules\-\_\-\-S\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_adff69170200be088f4e31cbd961c7313}
+
+
+Definition at line 116 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!C\-\_\-output@{C\-\_\-output}}
+\index{C\-\_\-output@{C\-\_\-output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{C\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-C\-\_\-output\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a7d18c62067bf203794962f45e46725bd}
+
+
+Definition at line 117 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!C\-\_\-rules\-\_\-\-N@{C\-\_\-rules\-\_\-\-N}}
+\index{C\-\_\-rules\-\_\-\-N@{C\-\_\-rules\-\_\-\-N}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{C\-\_\-rules\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-C\-\_\-rules\-\_\-\-N\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a5c7dc06b9cddd38718af6da8281e0a55}
+
+
+Definition at line 115 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!C\-\_\-rules\-\_\-\-S@{C\-\_\-rules\-\_\-\-S}}
+\index{C\-\_\-rules\-\_\-\-S@{C\-\_\-rules\-\_\-\-S}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{C\-\_\-rules\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-C\-\_\-rules\-\_\-\-S\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a200c0138c551ca6d858fdc4f4bd6692f}
+
+
+Definition at line 116 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!D\-\_\-output@{D\-\_\-output}}
+\index{D\-\_\-output@{D\-\_\-output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{D\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-D\-\_\-output\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a109cb45ea0bdd047a1ce342067b72d2c}
+
+
+Definition at line 117 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!D\-\_\-rules\-\_\-\-N@{D\-\_\-rules\-\_\-\-N}}
+\index{D\-\_\-rules\-\_\-\-N@{D\-\_\-rules\-\_\-\-N}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{D\-\_\-rules\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-D\-\_\-rules\-\_\-\-N\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a100687bd8283c5e2802b1119637ce08d}
+
+
+Definition at line 115 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!D\-\_\-rules\-\_\-\-S@{D\-\_\-rules\-\_\-\-S}}
+\index{D\-\_\-rules\-\_\-\-S@{D\-\_\-rules\-\_\-\-S}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{D\-\_\-rules\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::\-D\-\_\-rules\-\_\-\-S\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a34cbbb838873ee0782e3b10e2c778919}
+
+
+Definition at line 116 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!defuzz\-\_\-method@{defuzz\-\_\-method}}
+\index{defuzz\-\_\-method@{defuzz\-\_\-method}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{defuzz\-\_\-method}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-O\-F\-S\-M\-C\-Defuzz}$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::defuzz\-\_\-method\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_ad7d42de3a38d4ad16e1347d2072c1cdd}
+
+
+Definition at line 112 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!error\-\_\-out@{error\-\_\-out}}
+\index{error\-\_\-out@{error\-\_\-out}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{error\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::error\-\_\-out\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a2c01240b869d5c152dd0d3ef69f37b90}
+
+
+Definition at line 114 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!fuzzy\-\_\-input\-\_\-vars@{fuzzy\-\_\-input\-\_\-vars}}
+\index{fuzzy\-\_\-input\-\_\-vars@{fuzzy\-\_\-input\-\_\-vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{fuzzy\-\_\-input\-\_\-vars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vars\-Node}$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::fuzzy\-\_\-input\-\_\-vars\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_ad24af59fd812f663282ed12f1672b3e6}
+
+
+Definition at line 107 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!fuzzy\-\_\-output\-\_\-vars@{fuzzy\-\_\-output\-\_\-vars}}
+\index{fuzzy\-\_\-output\-\_\-vars@{fuzzy\-\_\-output\-\_\-vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{fuzzy\-\_\-output\-\_\-vars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vars\-Node}$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::fuzzy\-\_\-output\-\_\-vars\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_abbb5ba8fd219c91c6be00a0201cbe92e}
+
+
+Definition at line 108 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!inputs\-Vars@{inputs\-Vars}}
+\index{inputs\-Vars@{inputs\-Vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{inputs\-Vars}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::inputs\-Vars\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a3dba13c7087bd38cf2f7dfeb0392af5a}
+
+
+Definition at line 102 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!mode@{mode}}
+\index{mode@{mode}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}int mofs\-::\-M\-O\-F\-S\-Model\-::mode\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_abe4564bf730b587ac6450393368a4b7d}
+
+
+Definition at line 111 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!num\-\_\-inputs@{num\-\_\-inputs}}
+\index{num\-\_\-inputs@{num\-\_\-inputs}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{num\-\_\-inputs}]{\setlength{\rightskip}{0pt plus 5cm}int mofs\-::\-M\-O\-F\-S\-Model\-::num\-\_\-inputs\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_aabf440ccddce57ec89ce79a6fad9b681}
+
+
+Definition at line 113 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!num\-\_\-vars@{num\-\_\-vars}}
+\index{num\-\_\-vars@{num\-\_\-vars}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{num\-\_\-vars}]{\setlength{\rightskip}{0pt plus 5cm}int mofs\-::\-M\-O\-F\-S\-Model\-::num\-\_\-vars\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a9c27b6a183c8aa904ca3d13e23f6183a}
+
+
+Definition at line 103 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!output@{output}}
+\index{output@{output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}float mofs\-::\-M\-O\-F\-S\-Model\-::output\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a718fdaac46cd9b354476f50ae7d0eec0}
+
+
+Definition at line 109 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!pesos@{pesos}}
+\index{pesos@{pesos}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{pesos}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::pesos\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a2c681f92a6add4a532262b28a7792147}
+
+
+Definition at line 114 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!rule\-\_\-data\-\_\-list@{rule\-\_\-data\-\_\-list}}
+\index{rule\-\_\-data\-\_\-list@{rule\-\_\-data\-\_\-list}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{rule\-\_\-data\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rule\-Data}$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::rule\-\_\-data\-\_\-list\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a6eab5bb79e3f17149a6d64ec4e332c34}
+
+
+Definition at line 105 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!rule\-\_\-store@{rule\-\_\-store}}
+\index{rule\-\_\-store@{rule\-\_\-store}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{rule\-\_\-store}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rule\-Node}$\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::rule\-\_\-store\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_aed1b4ed2f109fdb3e997a06af5bb591b}
+
+
+Definition at line 104 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!set\-\_\-output@{set\-\_\-output}}
+\index{set\-\_\-output@{set\-\_\-output}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{set\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}char mofs\-::\-M\-O\-F\-S\-Model\-::set\-\_\-output\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_ae6b5621144997f4c2207b557fe21ee47}
+
+
+Definition at line 110 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!var1@{var1}}
+\index{var1@{var1}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{var1}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::var1\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a80d9e751d4579352a26d1a0d56fa9bd4}
+
+
+Definition at line 114 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!vars\-\_\-out@{vars\-\_\-out}}
+\index{vars\-\_\-out@{vars\-\_\-out}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{vars\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::vars\-\_\-out\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a849a783847322cfc416d693c3b68e51c}
+
+
+Definition at line 114 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!xpos\-\_\-file@{xpos\-\_\-file}}
+\index{xpos\-\_\-file@{xpos\-\_\-file}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{xpos\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::xpos\-\_\-file\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_a2929df05d19fe6f7505b91cb08c016dd}
+
+
+Definition at line 114 of file M\-O\-F\-S\-Model.\-h.
+
+\index{mofs\-::\-M\-O\-F\-S\-Model@{mofs\-::\-M\-O\-F\-S\-Model}!ypos\-\_\-file@{ypos\-\_\-file}}
+\index{ypos\-\_\-file@{ypos\-\_\-file}!mofs::MOFSModel@{mofs\-::\-M\-O\-F\-S\-Model}}
+\subsubsection[{ypos\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ mofs\-::\-M\-O\-F\-S\-Model\-::ypos\-\_\-file\hspace{0.3cm}{\ttfamily [private]}}\label{classmofs_1_1MOFSModel_aa1b1ee6d71867c9e3494095271c0af09}
+
+
+Definition at line 114 of file M\-O\-F\-S\-Model.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+{\bf M\-O\-F\-S\-Model.\-h}\item 
+{\bf M\-O\-F\-S\-Model.\-cpp}\end{DoxyCompactItemize}

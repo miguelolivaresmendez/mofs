@@ -1,0 +1,42 @@
+<package>
+  <!-- Package Metadata -->
+  <name>mofs</name>
+  <version>2.0.0</version>
+  <description> a ROS-package to generate and use Mandani Fuzzy controllers (MISO)
+
+     The mofs is based on the C++ library called mofs (Miguel Olivares Fuzzy Software). I have been using this library to control different kind of robots/vehicles like a wheelchair, unamnned helicopters, quadrotors, and a citroen C3. With this implemented ROS package I'm trying to share in the best way this software, hope that it could be useful for a many people.
+
+  </description>
+
+  <maintainer email="miguel.olivaresmendez@uni.lu">Miguel A. Olivares-Mendez</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/mofs</url>
+ 
+  
+  <!-- Package Dependencies -->
+  <build_depend>message_generation</build_depend>
+  <run_depend>message_runtime</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>std_srvs</run_depend>
+  <build_depend>std_srvs</build_depend>
+  <run_depend>std_msgs</run_depend>
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+  <build_depend>rosbag</build_depend>
+  <run_depend>rosbag</run_depend>
+
+
+  <!-- to make sure that the srv files are turned into source code for C++ -->
+  <!-- at build time you need message_generation -->
+  
+  <!-- at run time you need message_runtime -->
+   <export>
+  <rosdoc config="rosdoc.yaml" />
+  </export>
+
+</package>
+
+

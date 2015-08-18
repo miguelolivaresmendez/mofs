@@ -1,0 +1,6 @@
+<launch>
+   <node name="flcRoll" pkg="mofs" type="mofs" args="PID_basic45rules_degrees.txt basic45rules.txt flcRoll">
+  </node> 
+  	<node name="flcHeight" pkg="mofs" type="mofs" args="PID_basic45rules_degrees.txt basic45rules.txt flcHeight">
+  </node> 
+</launch>

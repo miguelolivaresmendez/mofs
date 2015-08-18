@@ -1,0 +1,11 @@
+<launch>
+  <!--node name="flcYaw" pkg="mofs" type="mofs" args="PID.txt 125Rules.txt flcYaw"-->
+  <node name="flcYaw" pkg="mofs" type="mofs" args="PID_basic45rules_2_degrees.txt basic45rules_7.txt flcYaw">
+  </node> 
+    <node name="flcRoll" pkg="mofs" type="mofs" args="PID_basic45rules_3.txt basic45rules_7.txt flcRoll">
+  </node> 
+	<node name="flcPitch" pkg="mofs" type="mofs" args="PID_basic45rules_2.txt basic45rules_7.txt flcPitch">
+  </node> 
+  	<node name="flcHeight" pkg="mofs" type="mofs" args="PID_basic45rules_2.txt basic45rules_7.txt flcHeight">
+  </node> 
+</launch>

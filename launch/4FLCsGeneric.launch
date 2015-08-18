@@ -1,0 +1,10 @@
+<launch>
+  <node name="flcYaw" pkg="mofs" type="mofs" args="PID.txt 125rules_PID.txt flcYaw">
+  </node> 
+    <node name="flcRoll" pkg="mofs" type="mofs" args="PID.txt 125rules_PID.txt flcRoll">
+  </node> 
+	<node name="flcThrust" pkg="mofs" type="mofs" args="PID.txt 125rules_PID.txt flcThrust">
+  </node> 
+	<node name="flcPitch" pkg="mofs" type="mofs" args="PIDmeters.txt 125rules_PID.txt flcPitch">
+  </node> 
+</launch>
